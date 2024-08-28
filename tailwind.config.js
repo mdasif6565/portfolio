@@ -6,6 +6,7 @@ module.exports = {
       width: {
         '1/7': '45%',
         '1/8': '24%',
+        '1/5':'32%',
       },
 
       fontFamily: {
