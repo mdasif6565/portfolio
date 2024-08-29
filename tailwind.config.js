@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         dosis: ["dosis", "sans-serif"],
       },
+      // TODO: need to fix this class name
       colors:{
       'secondary':'#3D3E42',
       'secondary-dark':'#31333B',
