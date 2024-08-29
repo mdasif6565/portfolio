@@ -13,3 +13,7 @@ body{
 .active {
     color: white;
 }
+#portfolio-img{
+    background-image: url(project-5.jpg);
+    background-size: cover;
+}
