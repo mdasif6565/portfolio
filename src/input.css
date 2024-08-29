@@ -10,10 +10,28 @@ body{
     padding: 0;
 }
 
+.section-gap {
+    @apply py-20;
+}
+
+.section-gap-top {
+    @apply pt-20;
+}
+
+.section-gap-bottom {
+    @apply pb-20;
+}
+
 .active {
     color: white;
 }
 #portfolio-img{
     background-image: url(project-5.jpg);
     background-size: cover;
+}
+
+/* skils card */
+.box-shadow-custom {
+    box-shadow: #FFC86B 0px 0px 20px;
+    border-radius: 100%
 }
