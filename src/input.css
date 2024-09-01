@@ -21,8 +21,9 @@ body{
     @apply pb-20;
 }
 
-.active {
+ul li a.active{
     color: white;
+    
 }
 #portfolio-img{
     background-image: url(project-5.jpg);
@@ -34,6 +35,4 @@ body{
     box-shadow: #FFC86B 0px 0px 20px;
     border-radius: 100%
 }
-.bottom-shadow-costom{
-    
-}
+
