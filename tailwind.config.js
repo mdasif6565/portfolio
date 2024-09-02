@@ -3,7 +3,14 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     container: {
-      center: true
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
     },
     extend: {
       width: {
@@ -15,13 +22,11 @@ module.exports = {
       fontFamily: {
         dosis: ["dosis", "sans-serif"],
       },
-      // TODO: need to fix this class name
       colors:{
+      'primary':'#FFC86B',
       'secondary':'#3D3E42',
       'secondary-dark':'#31333B',
-      'yellow-light':'#FFC86B',
-      'dark-mate':'#34353A',
-      'dark-light':'#9a9b9c',
+      'secondary-light':'#9a9b9c',
       },
     },
   },

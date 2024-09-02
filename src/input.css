@@ -1,16 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    margin: 0%;
-    padding: 0%;
-}
-body{
-    padding: 0;
-    overflow-x: hidden;
-}
+
 .section-gap {
-    @apply py-20;
+    @apply py-10 lg:py-20;
 }
 
 .section-gap-top {
@@ -25,6 +18,34 @@ ul li a.active{
     color: white;
     
 }
+/* TODO: need to use this class in all section title */
+.section-title {
+    @apply text-white text-4xl sm:text-5xl 2xl:text-6xl font-semibold leading-loose font-serif;
+}
+
+/* TODO: using this class in all title */
+.title-mb {
+    @apply mb-12;
+}
+
+/*====== header==== */
+.nav-list {
+    @apply h-full flex items-center;
+}
+.nav-link-desktop{
+    @apply h-full flex items-center text-xl xl:text-2xl font-medium text-secondary-light hover:text-primary transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 font-dosis;
+}
+.nav-link-phone{
+    @apply h-full flex items-center text-xl xl:text-2xl font-medium text-secondary-light hover:text-primary transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 font-dosis;
+}
+/*======./ header==== */
+
+/*=========Skill card=======*/
+.card-wrapper {
+    @apply flex flex-col gap-10 items-center justify-center p-4 w-full h-full bg-secondary rounded-3xl transition ease-in-out delay-150 hover:-translate-y-1 duration-300 hover:bg-primary;
+}
+/*=========./Skill card=======*/
+
 #portfolio-img{
     background-image: url(project-5.jpg);
     background-size: cover;
