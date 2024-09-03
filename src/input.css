@@ -18,14 +18,15 @@ ul li a.active{
     color: white;
     
 }
-/* TODO: need to use this class in all section title */
 .section-title {
     @apply text-white text-4xl sm:text-5xl 2xl:text-6xl font-semibold leading-loose font-serif;
 }
 
-/* TODO: using this class in all title */
 .title-mb {
     @apply mb-12;
+}
+.portfolio-size{
+    @apply h-[280px] 2xl:h-[450px];
 }
 
 /*====== header==== */
@@ -45,15 +46,20 @@ ul li a.active{
     @apply flex flex-col gap-10 items-center justify-center p-4 w-full h-full bg-secondary rounded-3xl transition ease-in-out delay-150 hover:-translate-y-1 duration-300 hover:bg-primary;
 }
 /*=========./Skill card=======*/
-
-#portfolio-img{
-    background-image: url(project-5.jpg);
-    background-size: cover;
+.img-wrapper{
+    @apply w-8 h-8 lg:w-24 lg:h-44;
 }
-
 /* skils card */
+
+
+
 .box-shadow-custom {
     box-shadow: #FFC86B 0px 0px 20px;
     border-radius: 100%
 }
-
+.contact-card-style{
+    @apply mt-2 flex items-center justify-center p-4 px-4 rounded-md bg-secondary-dark w-72 xl:w-96 2xl:w-[600px];
+}
+.contct-svg{
+    @apply size-10 2xl:size-16 text-gray-200 font-bold pr-2;
+}
