@@ -1305,15 +1305,6 @@ ul li a.active{
   width: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes spin {
-  }
-
-  .img-wrapper {
-    animation: spin 1s linear infinite;
-  }
-}
-
 @media (min-width: 1024px) {
   .img-wrapper {
     height: 11rem;
