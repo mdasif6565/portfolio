@@ -20,4 +20,31 @@ links.forEach((link) => {
     // then in the end add the active class only in the correct one
     e.target.classList.add('active')
   })
-})
+});
+
+document.addEventListener('scroll', function() {
+
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link-desktop');
+
+  let currentSection = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+
+   navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+    
+    if (href && href.includes(currentSection)) {      
+      link.classList.add('active', );
+    }
+  });
+
+});

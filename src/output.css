@@ -708,13 +708,6 @@ video {
   margin-top: 1rem;
 }
 
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .block {
   display: block;
 }
@@ -835,6 +828,32 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -878,10 +897,6 @@ video {
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
-}
-
-.text-wrap {
-  text-wrap: wrap;
 }
 
 .text-nowrap {
@@ -1036,11 +1051,6 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1054,11 +1064,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1182,19 +1187,13 @@ ul li a.active{
   }
 }
 
+/* ======heading margin-bottom=======  */
+
 .title-mb {
   margin-bottom: 3rem;
 }
 
-.portfolio-size {
-  height: 280px;
-}
-
-@media (min-width: 1536px) {
-  .portfolio-size {
-    height: 450px;
-  }
-}
+/* =====./ heading margin-bottom======= */
 
 /*====== header==== */
 
@@ -1272,7 +1271,7 @@ ul li a.active{
 
 /*======./ header==== */
 
-/*=========Skill card=======*/
+/*=========Skill-card-section=======*/
 
 .card-wrapper {
   display: flex;
@@ -1301,11 +1300,18 @@ ul li a.active{
   background-color: rgb(255 200 107 / var(--tw-bg-opacity));
 }
 
-/*=========./Skill card=======*/
-
 .img-wrapper {
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes spin {
+  }
+
+  .img-wrapper {
+    animation: spin 1s linear infinite;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1315,12 +1321,75 @@ ul li a.active{
   }
 }
 
-/* skils card */
+.skills-card-heading {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-wrap: wrap;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .skills-card-heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-card-heading {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/*=========./Skill card-section=======*/
+
+/* =========portfolio-section========= */
+
+.portfolio-size {
+  height: 280px;
+}
+
+@media (min-width: 1536px) {
+  .portfolio-size {
+    height: 450px;
+  }
+}
+
+.portfolio-heading {
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.portfolio-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========./portfolio-section======= */
+
+/* =======experience box-shadow */
 
 .box-shadow-custom {
   box-shadow: #FFC86B 0px 0px 20px;
   border-radius: 100%
 }
+
+/* ======./experience box-shadow */
+
+/* ===========contact=========== */
 
 .contact-card-style {
   margin-top: 0.5rem;
@@ -1364,6 +1433,8 @@ ul li a.active{
   }
 }
 
+/* ========./contact=========== */
+
 .hover\:-translate-y-1:hover {
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1395,8 +1466,8 @@ ul li a.active{
   visibility: visible;
 }
 
-.group:hover .group-hover\:bg-black\/40 {
-  background-color: rgb(0 0 0 / 0.4);
+.group:hover .group-hover\:bg-black\/65 {
+  background-color: rgb(0 0 0 / 0.65);
 }
 
 @media (min-width: 640px) {
@@ -1502,11 +1573,6 @@ ul li a.active{
   .md\:gap-8 {
     gap: 2rem;
   }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1563,11 +1629,6 @@ ul li a.active{
       font-size: 2.25rem;
       line-height: 2.5rem;
     }
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {
