@@ -48,3 +48,12 @@ document.addEventListener('scroll', function() {
   });
 
 });
+
+
+let typed= new Typed(".text", {
+  strings:["Frontend Developer", "Frontend Developer","Frontend Developer"],
+  typeSpeed: 100,
+  backSpeed: 50,
+  backDelay: 200,
+  loop: true
+});
